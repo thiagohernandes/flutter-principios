@@ -8,7 +8,7 @@ class Ex03TextsDividerTopExpansion extends StatelessWidget {
         appBar : AppBar(
             title : Text("Flutter Playground!")
         ),
-        drawer : Drawer(
+            drawer : Drawer(
             child : Column(
               children : [
                     Text("Item 1"),
