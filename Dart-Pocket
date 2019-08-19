@@ -1,0 +1,600 @@
+
+----------------------------------------------------------------------------
+  _____                   _       _____                   _             _   
+ |  __ \                 | |     |  __ \                 | |           | |  
+ | |  | |   __ _   _ __  | |_    | |__) |   ___     ___  | | __   ___  | |_ 
+ | |  | |  / _` | | '__| | __|   |  ___/   / _ \   / __| | |/ /  / _ \ | __|
+ | |__| | | (_| | | |    | |_    | |      | (_) | | (__  |   <  |  __/ | |_ 
+ |_____/   \__,_| |_|     \__|   |_|       \___/   \___| |_|\_\  \___|  \__|
+
+----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Comentários
+-----------------------------------------------------------------------------
+/*
+	comentário
+*/
+
+/**
+	comentário
+*/
+
+-----------------------------------------------------------------------------
+Classe
+-----------------------------------------------------------------------------
+
+class Pet {
+num legs;
+/// Feeds your pet [Treats].
+	feed(Treats treat) {
+	// Feed the critter!
+	}
+}
+
+
+-----------------------------------------------------------------------------
+Variáveis
+-----------------------------------------------------------------------------
+
+var x;
+. . .or. . .
+<some specific type> x;
+
+var x = "Mel Brooks";
+String x = "Mel Brooks";
+
+dynamic x = "Mel Books";
+x = 42;
+
+Object x = "Mel Brooks";
+
+const x = "Mel Books";
+const String x = "Mel Brooks";
+final x = "Mel Brooks";
+
+-----------------------------------------------------------------------------
+DateTime
+-----------------------------------------------------------------------------
+
+const x = DateTime.now();
+
+final x = DateTime.now();
+
+-----------------------------------------------------------------------------
+Lists
+-----------------------------------------------------------------------------
+
+List lst = const [ 1, 2, 3];
+print(lst);
+lst = [ 4, 5, 6 ];
+print(lst);
+lst[0] = 999;
+print(lst);
+
+-----------------------------------------------------------------------------
+Mesclar
+-----------------------------------------------------------------------------
+
+String s1 = "Rickety Rocket";
+String s2 = "${s1} blast off!";
+String s3 = '$s1 blast off!';
+print (s2);
+print (s3);
+
+-----------------------------------------------------------------------------
+Parse
+-----------------------------------------------------------------------------
+
+int i = 5;
+double d = 5.5;
+String si = i.toString();
+String sd = d.toString();
+print(i);
+print(d);
+print(si);
+print(sd);
+
+String si = "5";
+String sd = "5.5";
+int i = int.parse(si);
+double d = double.parse(sd);
+
+-----------------------------------------------------------------------------
+Lists compare
+-----------------------------------------------------------------------------
+
+List lst = [ 1, 2, 3 ];
+
+var lst1 = [ 1, 2, 3 ];
+Object lst2 = [ 1, 2, 3 ];
+
+List lst = [ 8, 3, 12 ];
+lst.add(4);
+lst.sort((a, b) => a.compareTo(b));
+lst.removeLast();
+print(lst.indexOf(4));
+print(lst);
+
+-----------------------------------------------------------------------------
+Cookies
+-----------------------------------------------------------------------------
+
+Set cookies = Set();
+cookies.addAll([ "oatmeal", "chocolate", "rainbow" ]);
+cookies.add("oatmeal"); // No harm, no foul
+cookies.remove("chocolate");
+print(cookies);
+print(cookies.contains("oatmeal"));
+print(cookies.containsAll([ "chocolate", "rainbow" ]));
+
+-----------------------------------------------------------------------------
+Maps
+-----------------------------------------------------------------------------
+
+var actors = {
+"Ryan Reynolds" : "Deadpool",
+"Hugh Jackman" : "Wolverine"
+};
+print(actors);
+var actresses = Map();
+actresses["scarlett johansson"] = "Black Widow";
+actresses["Zoe Saldana"] = "Gamora";
+print (actresses);
+var movies = Map<String, int>();
+movies["Iron Man"] = 3;
+movies["Thor"] = 3;
+print(movies);
+print(actors["Ryan Reynolds"]);
+print(actresses["Elizabeth Olsen"]);
+movies.remove("Thor");
+print(movies);
+print(actors.keys);
+print(actresses.values);
+Map sequels = { };
+print(sequels.isEmpty);
+sequels["The Winter Soldier"] = 2;
+sequels["Civil War"] = 3;
+sequels.forEach((k, v) {
+print(k + " sequel #" + v.toString());
+});
+
+-----------------------------------------------------------------------------
+Object
+-----------------------------------------------------------------------------
+
+Object obj = some_object;
+dynamic obj = some_object;
+
+-----------------------------------------------------------------------------
+Enum
+-----------------------------------------------------------------------------
+
+enum SciFiShows { Babylon_5, Stargate_SG1, Star_Trek };
+
+main() {
+assert(SciFiShows.Babylon_5.index == 0);
+assert(SciFiShows.Stargate_SG1.index == 1);
+assert(SciFiShows.Star_Trek.index == 2);
+print(SciFiShows.values);
+print(SciFiShows.Stargate_SG1.index);
+var show = SciFiShows.Babylon_5;
+switch (show) {
+	case SciFiShows.Babylon_5: print("B5"); break;
+	case SciFiShows.Stargate_SG1: print("SG1"); break;
+	case SciFiShows.Star_Trek: print("ST"); break;
+}
+}
+
+
+-----------------------------------------------------------------------------
+Looping
+-----------------------------------------------------------------------------
+
+for (var i = 0; i < 10; i++) {
+print(i);
+}
+
+List starfleet = [ "1701", "1234", "1017", "2610", "7410" ];
+main() {
+for (var shipNum in starfleet) {
+print("NCC-" + shipNum);
+}
+}
+
+main() {
+starfleet.forEach((shipNum) => print("NCC-" + shipNum));
+}
+
+while (!isDone()) {
+// Do something
+}
+do {
+showStatus();
+} while (!processDone());
+
+
+-----------------------------------------------------------------------------
+switch
+-----------------------------------------------------------------------------
+
+switch (someVariable) {
+case 1:
+// Do something
+break;
+case 2:
+// Do something else
+break;
+default:
+// It wasn't 1 or 2
+break;
+}
+
+
+
+-----------------------------------------------------------------------------
+if
+-----------------------------------------------------------------------------
+
+if (mercury == true || venus == true ||
+earth == true || mars == true
+) {
+print ("It's an inner planet");
+} else if (jupiter || saturn || uranus || neptune) {
+print ("It's an outer planet");
+} else {
+print("Poor Pluto, you are NOT a planet");
+}
+
+-----------------------------------------------------------------------------
+function e class
+-----------------------------------------------------------------------------
+
+void func() { }
+class MyClass {
+void sayHi() {
+print("Hi");
+dynamic a = 1;
+return a;
+}
+}
+main() {
+MyClass mc = MyClass();
+var b = mc.sayHi();
+print(b);
+}
+
+-----------------------------------------------------------------------------
+List<void>
+-----------------------------------------------------------------------------
+
+main() {
+List<void> l = [ 1, 2, 3 ]; // Equivalent to List<Object> = [ 1, 2, 3 ];
+print(l);
+}
+
+-----------------------------------------------------------------------------
+operator
+-----------------------------------------------------------------------------
+
++ Add
+- Subtract
+-expr Prefix unary minus (a.k.a. negation/reverse sign of expression)
+* Multiply
+/ Divide
+~/ Divide, returning an integer result
+% Get the remainder of an integer division (modulo)
+++var Prefix increment, equivalent to var = var + 1 (expression value is var + 1)
+var++ Postfix increment, equivalent to var = var + 1 (expression value is var)
+--var Prefix decrement, equivalent to var = var – 1 (expression value is var – 1)
+var-- Postfix decrement, var = var – 1 (expression value is var)
+== Equal
+!= Not equal
+> Greater than
+< Less than
+>= Greater than or equal to
+<= Less than or equal to
+= Assignment
+& Logical AND
+| Logical OR
+^ Logical XOR
+~expr Unary bitwise complement (0s become 1s; 1s become 0s)
+<< Shift left
+>> Shift right
+a ? b : c Ternary conditional expression
+a ?? b Binary conditional expression: if a is not null, return a, otherwise return b
+.. Cascade notation
+() Function application
+[] List access
+. Member access
+
+
+-----------------------------------------------------------------------------
+Instance variables
+-----------------------------------------------------------------------------
+
+class Hero {
+String firstName;
+String lastName;
+}
+
+class MyClass {
+static String greeting = "Hi";
+}
+main() {
+print(MyClass.greeting);
+}
+
+-----------------------------------------------------------------------------
+classe função
+-----------------------------------------------------------------------------
+
+class Hero {
+String firstName;
+String lastName;
+String sayName() {
+	return "$lastName, $firstName";
+}
+}
+
+main() {
+Hero h = new Hero ();
+h.firstName = "Luke";
+h.lastName = "Skywalker";
+print(h.sayName());
+}
+
+-----------------------------------------------------------------------------
+construtor
+-----------------------------------------------------------------------------
+
+class Hero {
+String firstName;
+String lastName;
+Hero(String fn, String ln) {
+firstName = fn;
+lastName = ln;
+}
+String sayName() {
+return "$lastName, $firstName";
+}
+}
+
+main() {
+Hero h = new Hero("Luke", "Skywalker");
+print(h.sayName());
+}
+
+-----------------------------------------------------------------------------
+this
+-----------------------------------------------------------------------------
+
+class Hero {
+String firstName;
+String lastName;
+Hero(this.firstName, this.lastName);
+String sayName() {
+return "$lastName, $firstName";
+}
+}
+
+class Account {
+int balance;
+Account(int balance) {
+this.balance = balance;
+}
+}
+
+-----------------------------------------------------------------------------
+extends
+-----------------------------------------------------------------------------
+
+class Hero {
+String firstName;
+String lastName;
+Hero.build(this.firstName, this.lastName);
+String sayName() {
+return "$lastName, $firstName";
+}
+}
+class UltimateHero extends Hero {
+UltimateHero(fn, ln) : super.build(fn, ln);
+String sayName() {
+return "Jedi $lastName, $firstName";
+}
+}
+
+
+-----------------------------------------------------------------------------
+getter setter
+-----------------------------------------------------------------------------
+
+class Hero {
+String firstName;
+String lastName;
+String get fullName => "$lastName, $firstName";
+set fullName(n) => firstName = n;
+Hero(String fn, String ln) {
+firstName = fn;
+lastName = ln;
+}
+String sayName() {
+return "$lastName, $firstName";
+}
+}
+
+main() {
+Hero h = new Hero("Luke", "Skywalker");
+print(h.sayName());
+print(h.fullName);
+h.fullName = "Anakin";
+print(h.fullName);
+}
+
+
+-----------------------------------------------------------------------------
+getter setter
+-----------------------------------------------------------------------------
+
+class UltimateHero implements Hero {
+@override
+String firstName;
+@override
+String lastName;
+UltimateHero(this.firstName, this.lastName);
+String sayName() {
+return "Jedi $lastName, $firstName";
+}
+}
+
+-----------------------------------------------------------------------------
+abstract class
+-----------------------------------------------------------------------------
+
+abstract class MyAbstractClass {
+someMethod();
+}
+abstract class MyAbstractClass {
+someMethod() {
+// Do something
+}
+}
+
+-----------------------------------------------------------------------------
+mixin
+-----------------------------------------------------------------------------
+
+class Person { }
+
+mixin Avenger {
+	bool wieldsMjolnir = false;
+	bool hasArmor = false;
+	bool canShrink = true;
+	whichAvenger() {
+		if (wieldsMjolnir) {
+		print("I'm Thor");
+		} else if (hasArmor) {
+		print("I'm Iron Man");
+		} else {
+		print("I'm Ant Man");
+		}
+	}
+}
+class Superhero extends Person with Avenger { }
+main() {
+Superhero s = new Superhero();
+s.whichAvenger();
+}
+
+-----------------------------------------------------------------------------
+forEach
+-----------------------------------------------------------------------------
+
+main() {
+var bands = [ "Dream Theater", "Kamelot", "Periphery" ];
+bands.forEach((band) {
+print("${bands.indexOf(band)}: $band");
+});
+}
+
+-----------------------------------------------------------------------------
+await asynchrony
+-----------------------------------------------------------------------------
+
+await someLongRunningFunction();
+
+Future someLongRunningFunction() async {
+// Do something that takes a long time
+}
+There’s one more key piece of information: the function that calls
+someLongRunningFunction() must itself be marked as async:
+MyFunction() async {
+await someLongRunningFunction();
+}
+
+Stream<int> countTo(int max) async* {
+int i = 0;
+while (i < max) yield i++;
+}
+main() async {
+Stream s = countTo(5);
+await for (int i in s) { print(i); }
+}
+
+-----------------------------------------------------------------------------
+import
+-----------------------------------------------------------------------------
+
+import "dart:html";
+import "package:someLib.dart";
+import "../libs/myLibrary.dart";
+import "libs/lib1.dart";
+import "libs/lib2.dart" as lib2;
+
+await lib1.loadLibrary();
+
+
+-----------------------------------------------------------------------------
+try
+-----------------------------------------------------------------------------
+
+try {
+somethingThatMightThrowAnException();
+} on FormatException catch (fe) {
+print(fe);
+} on Exception catch (e) {
+Print("Some other Exception: " + e);
+} catch (u) {
+print("Unknown exception");
+} finally {
+print("All done!");
+}
+
+-----------------------------------------------------------------------------
+annotation
+-----------------------------------------------------------------------------
+
+class MyAnnotation {
+final String note;
+const MyAnnotation(this.note);
+}
+Here, the annotation can take an argument, so we can use it like so:
+@MyAnnotation("This is my function")
+Void myFunction() {
+// Do something
+}
+
+-----------------------------------------------------------------------------
+generic
+-----------------------------------------------------------------------------
+
+abstract class Things<V> {
+T getByName(String name);
+void setByName(String name, V value);
+}
+
+
+class C {
+E showFirst<E>(List<E> lst) {
+E item = lst[0];
+if (item is num) {
+print("It's a number");
+}
+print(item);
+return item;
+}
+}
+main() async {
+C c = new C();
+c.showFirst(<String>[ "Java", "Dart" ]);
+c.showFirst(<num>[ 42, 66 ]);
+}
+
+-----------------------------------------------------------------------------
+addAll
+-----------------------------------------------------------------------------
+
+var veggies = List<String>();
+veggies.addAll([ "Peas", "Carrots", "Cauliflower"]);
+print(veggies is List<String>);
+
