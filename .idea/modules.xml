@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/flutter-principios.iml" filepath="$PROJECT_DIR$/.idea/flutter-principios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter-principios.iml" filepath="$PROJECT_DIR$/flutter-principios.iml" />
     </modules>
   </component>
 </project>
